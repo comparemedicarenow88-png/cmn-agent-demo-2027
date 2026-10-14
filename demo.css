@@ -122,3 +122,21 @@
 
 /* Testing fix: allow all 52 plan rows to extend down the page; retain horizontal table scrolling */
 .page-plans .tablewrap{max-height:none!important;overflow-x:auto;overflow-y:visible}
+
+/* Compact full-plan table: desktop fits viewport without horizontal scrolling */
+.page-plans .tablewrap{width:100%;max-width:100%;overflow-x:auto;overflow-y:visible}
+.page-plans .tablewrap table{width:100%;min-width:0;table-layout:fixed;white-space:normal;font-size:clamp(10px,.82vw,12px)}
+.page-plans .tablewrap th,.page-plans .tablewrap td{padding:8px 5px;white-space:normal;overflow-wrap:anywhere;word-break:normal;line-height:1.3;vertical-align:top}
+.page-plans .tablewrap th:nth-child(1){width:4%}
+.page-plans .tablewrap th:nth-child(2){width:19%}
+.page-plans .tablewrap th:nth-child(3){width:10%}
+.page-plans .tablewrap th:nth-child(4){width:7%}
+.page-plans .tablewrap th:nth-child(5){width:5%}
+.page-plans .tablewrap th:nth-child(6){width:7%}
+.page-plans .tablewrap th:nth-child(7){width:7%}
+.page-plans .tablewrap th:nth-child(8){width:8%}
+.page-plans .tablewrap th:nth-child(9){width:8%}
+.page-plans .tablewrap th:nth-child(10){width:11%}
+.page-plans .tablewrap th:nth-child(11){width:14%}
+.page-plans .tablewrap td.num{text-align:right}
+@media(max-width:750px){.page-plans .tablewrap table{min-width:900px;table-layout:auto;font-size:11px}.page-plans .tablewrap th,.page-plans .tablewrap td{padding:8px 7px}}
