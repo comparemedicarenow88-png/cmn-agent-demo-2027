@@ -140,3 +140,17 @@
 .page-plans .tablewrap th:nth-child(11){width:14%}
 .page-plans .tablewrap td.num{text-align:right}
 @media(max-width:750px){.page-plans .tablewrap table{min-width:900px;table-layout:auto;font-size:11px}.page-plans .tablewrap th,.page-plans .tablewrap td{padding:8px 7px}}
+
+/* Ten-column results table: preserve validation in stored rankings and CSV */
+.page-plans .tablewrap th:nth-child(1){width:4%}
+.page-plans .tablewrap th:nth-child(2){width:22%}
+.page-plans .tablewrap th:nth-child(3){width:11%}
+.page-plans .tablewrap th:nth-child(4){width:9%}
+.page-plans .tablewrap th:nth-child(5){width:6%}
+.page-plans .tablewrap th:nth-child(6){width:8%}
+.page-plans .tablewrap th:nth-child(7){width:12%}
+.page-plans .tablewrap th:nth-child(8){width:10%}
+.page-plans .tablewrap th:nth-child(9){width:9%}
+.page-plans .tablewrap th:nth-child(10){width:9%}
+.page-plans .tablewrap th.num-heading{text-align:right;vertical-align:bottom}
+.page-plans .tablewrap td:nth-child(9){text-align:right}
