@@ -112,3 +112,10 @@
 .page-home .home-split-photo,.page-home .home-family-photo{border:0!important;box-shadow:none!important;background:transparent!important;border-radius:0!important}
 .page-home .home-split-photo img,.page-home .home-family-photo img{border:0!important;border-radius:0!important;box-shadow:none!important}
 @media(max-width:800px){.page-home .home-split-copy,.page-home .home-feature-copy{padding:20px}}
+
+/* Spacious page rhythm on comparison, full roster and hearing pages */
+.page-compare main.container,.page-plans main.container,.page-hearing main.container{max-width:1500px;padding-left:clamp(22px,3vw,46px);padding-right:clamp(22px,3vw,46px)}
+.page-compare main.container>.card,.page-plans main.container>.card,.page-hearing main.container>.card{margin-top:0!important;margin-bottom:52px!important}
+.page-compare main.container>.compare-action{margin-top:4px;margin-bottom:18px}
+.page-compare main.container>.agent-section,.page-plans main.container>.agent-section,.page-hearing main.container>.agent-section{padding:23px 27px!important}
+@media(max-width:800px){.page-compare main.container,.page-plans main.container,.page-hearing main.container{padding-left:20px;padding-right:20px}.page-compare main.container>.card,.page-plans main.container>.card,.page-hearing main.container>.card{margin-bottom:34px!important}.page-compare main.container>.agent-section,.page-plans main.container>.agent-section,.page-hearing main.container>.agent-section{padding:18px!important}}
