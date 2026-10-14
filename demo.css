@@ -45,3 +45,37 @@
 
 /* Trial: McDowell Mountains panorama header */
 .page-home .hero{background:linear-gradient(90deg,rgba(232,246,252,.97) 0%,rgba(232,246,252,.84) 34%,rgba(232,246,252,.12) 69%,rgba(232,246,252,0) 100%),url("https://commons.wikimedia.org/wiki/Special:FilePath/Arizona_desert_panorama.jpg?width=1920") center 48%/cover no-repeat}
+
+/* Agent demo: coordinated photographic design for comparison, plans and hearing pages */
+.page-compare .agent-hero,.page-plans .agent-hero,.page-hearing .agent-hero{min-height:198px;padding:32px 0;background:linear-gradient(90deg,rgba(228,244,252,.98) 0%,rgba(226,243,250,.86) 36%,rgba(228,244,252,.14) 70%,rgba(228,244,252,0) 100%),url("https://commons.wikimedia.org/wiki/Special:FilePath/Arizona_desert_panorama.jpg?width=1920") center 52%/cover no-repeat}
+.page-compare .agent-hero h1,.page-plans .agent-hero h1,.page-hearing .agent-hero h1{font-size:clamp(30px,3.2vw,44px);line-height:1.12;letter-spacing:-.8px;max-width:1100px;margin:9px 0 12px}
+.page-compare .agent-hero .lead,.page-plans .agent-hero .lead,.page-hearing .agent-hero .lead{font-size:18px;max-width:930px}
+.page-compare main.container,.page-plans main.container,.page-hearing main.container{max-width:1500px;padding:14px 22px}
+.agent-warning{display:grid!important;grid-template-columns:58px 1fr;gap:16px;align-items:center;padding:14px 20px!important;border:1px solid #e7c361!important;background:linear-gradient(110deg,#fff8e5,#fffaf0)!important}
+.agent-warning .warning-symbol{font-size:39px;color:#dcaa16;text-align:center}
+.agent-warning h2{font-size:18px!important;margin:0 0 4px!important;color:#1c2a38}
+.agent-warning p{font-size:14px;line-height:1.45;margin:0}
+.agent-section{border-radius:10px!important;margin:10px 0 14px!important;padding:19px 23px!important}
+.agent-section.soft{background:linear-gradient(110deg,#edf9f2,#f6fcf8)!important;border-color:#b5dfc6}
+.agent-section>h2{font-size:22px!important;color:#10283b;display:flex;align-items:center;gap:12px;margin-bottom:15px!important}
+.agent-section .step-number{width:37px;height:37px;flex-basis:37px;font-size:20px}
+.agent-section .field{min-width:0}
+.agent-section .field label{font-size:14px;color:#173448}
+.agent-section input,.agent-section select,.agent-section textarea{border-radius:6px;padding:11px 12px}
+.agent-section .muted{font-size:13px}
+.agent-section .note{background:#fff8e8;padding:10px 13px;border-left:4px solid #e5af3c;border-radius:4px}
+.agent-section .actions{margin-top:15px}
+.agent-section button,.agent-section .button{padding:11px 19px}
+.page-plans .criteria-panel{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:20px}
+.page-plans .criteria-panel h2{grid-column:1/-1}
+.page-plans .criteria-panel p{margin:0}
+.page-plans .criteria-panel .button{justify-self:end}
+.page-plans .tablewrap,.page-hearing .tablewrap{box-shadow:0 2px 9px #0d3b1b10}
+.page-plans table th,.page-hearing table th{background:#ccefdc;color:#0d5030;font-weight:700}
+.page-plans table tbody tr:hover,.page-hearing table tbody tr:hover{background:#e6f7ed}
+.page-hearing .hearing-feedback{display:grid;grid-template-columns:1fr 1fr;column-gap:25px}
+.page-hearing .hearing-feedback h2{grid-column:1/-1}
+.page-hearing .hearing-feedback textarea{grid-column:2;grid-row:2 / span 2;min-height:140px!important}
+.page-hearing .hearing-feedback .actions{grid-column:2}
+.page-compare .compare-submit{background:#eaf8ef;border-color:#a9dcbf}
+@media(max-width:800px){.page-compare .agent-hero,.page-plans .agent-hero,.page-hearing .agent-hero{min-height:155px;padding:20px 0}.agent-warning{grid-template-columns:1fr}.agent-warning .warning-symbol{text-align:left}.agent-section{padding:14px!important}.page-plans .criteria-panel,.page-hearing .hearing-feedback{display:block}.page-hearing .hearing-feedback textarea{width:100%}}
