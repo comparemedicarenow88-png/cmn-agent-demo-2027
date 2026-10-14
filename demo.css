@@ -90,3 +90,17 @@
 .page-compare .compare-action{padding:15px 4px 35px;text-align:center}
 .page-compare .compare-action button{padding:14px 38px;font-size:18px;border-radius:7px;box-shadow:0 3px 10px #005f3330}
 .page-compare .compare-action #compareError{margin-top:10px;color:#a33}
+
+/* Home photo-led layout experiment */
+.page-home .hero h1,.page-home .hero .lead{color:#fff!important;text-shadow:0 2px 8px rgba(0,0,0,.68),0 1px 2px rgba(0,0,0,.7)}
+.page-home .home-split{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:stretch;overflow:hidden}
+.page-home .home-split-copy{padding:4px 0}
+.page-home .home-split-copy h2{font-size:clamp(24px,2.3vw,34px);line-height:1.2}
+.page-home .home-split-photo,.page-home .home-family-photo{min-width:0;overflow:hidden;border-radius:12px}
+.page-home .home-split-photo img,.page-home .home-family-photo img{display:block;width:100%;height:100%;object-fit:cover}
+.page-home .home-split-photo img{min-height:350px;max-height:540px;object-position:center}
+.page-home .home-features{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:stretch}
+.page-home .home-family-photo{grid-column:1;grid-row:1;max-height:670px}
+.page-home .home-family-photo img{object-position:center 35%;min-height:520px}
+.page-home .home-feature-copy{grid-column:2;grid-row:1;min-width:0}
+@media(max-width:800px){.page-home .home-split,.page-home .home-features{grid-template-columns:1fr!important}.page-home .home-split-photo{grid-row:2}.page-home .home-family-photo{grid-column:1;grid-row:1;max-height:460px}.page-home .home-family-photo img{min-height:350px}.page-home .home-feature-copy{grid-column:1;grid-row:2}}
