@@ -104,3 +104,11 @@
 .page-home .home-family-photo img{object-position:center 35%;min-height:520px}
 .page-home .home-feature-copy{grid-column:2;grid-row:1;min-width:0}
 @media(max-width:800px){.page-home .home-split,.page-home .home-features{grid-template-columns:1fr!important}.page-home .home-split-photo{grid-row:2}.page-home .home-family-photo{grid-column:1;grid-row:1;max-height:460px}.page-home .home-family-photo img{min-height:350px}.page-home .home-feature-copy{grid-column:1;grid-row:2}}
+
+/* Photos stand independently; only text halves are framed */
+.page-home .home-layout>.home-split,.page-home .home-layout>.home-features{background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important;padding:0!important;overflow:visible!important}
+.page-home .home-split-copy{background:linear-gradient(120deg,#edf9f1,#e6f6ed);border:1px solid #b8dfc7;border-radius:11px;padding:25px 27px;box-shadow:0 1px 2px #e6f1eb55}
+.page-home .home-feature-copy{background:#fff;border:1px solid #a9dec0;border-radius:11px;padding:23px 27px;box-shadow:0 1px 2px #e6f1eb55}
+.page-home .home-split-photo,.page-home .home-family-photo{border:0!important;box-shadow:none!important;background:transparent!important;border-radius:0!important}
+.page-home .home-split-photo img,.page-home .home-family-photo img{border:0!important;border-radius:0!important;box-shadow:none!important}
+@media(max-width:800px){.page-home .home-split-copy,.page-home .home-feature-copy{padding:20px}}
