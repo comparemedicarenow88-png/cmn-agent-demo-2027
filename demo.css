@@ -169,3 +169,11 @@
 .page-plans .tablewrap th:nth-child(n+4):nth-child(-n+7),.page-plans .tablewrap td:nth-child(n+4):nth-child(-n+7){padding-left:3px;padding-right:3px}
 .page-plans .tablewrap td:nth-child(7){overflow-wrap:normal;word-break:normal}
 }
+
+/* Fine alignment: raise single-line PCP/Specialist headings; shift premium group left */
+@media(min-width:751px){
+.page-plans .tablewrap th:nth-child(5),.page-plans .tablewrap th:nth-child(6){vertical-align:middle!important;padding-bottom:18px}
+.page-plans .tablewrap th:nth-child(4),.page-plans .tablewrap td:nth-child(4),
+.page-plans .tablewrap th:nth-child(5),.page-plans .tablewrap td:nth-child(5),
+.page-plans .tablewrap th:nth-child(6),.page-plans .tablewrap td:nth-child(6){position:relative;left:-14px}
+}
