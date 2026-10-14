@@ -177,3 +177,16 @@
 .page-plans .tablewrap th:nth-child(5),.page-plans .tablewrap td:nth-child(5),
 .page-plans .tablewrap th:nth-child(6),.page-plans .tablewrap td:nth-child(6){position:relative;left:-14px}
 }
+
+/* Restore continuous row shading and rules; shift values via inner padding, not positioned cells */
+@media(min-width:751px){
+.page-plans .tablewrap th:nth-child(4),.page-plans .tablewrap td:nth-child(4),
+.page-plans .tablewrap th:nth-child(5),.page-plans .tablewrap td:nth-child(5),
+.page-plans .tablewrap th:nth-child(6),.page-plans .tablewrap td:nth-child(6){
+position:static!important;left:auto!important;transform:none!important;
+padding-left:0!important;padding-right:16px!important;
+}
+.page-plans .tablewrap th:nth-child(4),.page-plans .tablewrap th:nth-child(5),.page-plans .tablewrap th:nth-child(6),
+.page-plans .tablewrap td:nth-child(4),.page-plans .tablewrap td:nth-child(5),.page-plans .tablewrap td:nth-child(6){text-align:left!important}
+.page-plans .tablewrap th:nth-child(5),.page-plans .tablewrap th:nth-child(6){vertical-align:middle!important}
+}
