@@ -154,3 +154,18 @@
 .page-plans .tablewrap th:nth-child(10){width:9%}
 .page-plans .tablewrap th.num-heading{text-align:right;vertical-align:bottom}
 .page-plans .tablewrap td:nth-child(9){text-align:right}
+
+/* Tighter premium-to-hospital group: reclaim space for hospital schedule text */
+@media(min-width:751px){
+.page-plans .tablewrap th:nth-child(2){width:22%}
+.page-plans .tablewrap th:nth-child(3){width:11%}
+.page-plans .tablewrap th:nth-child(4){width:8%}
+.page-plans .tablewrap th:nth-child(5){width:5%}
+.page-plans .tablewrap th:nth-child(6){width:7%}
+.page-plans .tablewrap th:nth-child(7){width:18%}
+.page-plans .tablewrap th:nth-child(8){width:9%}
+.page-plans .tablewrap th:nth-child(9){width:8%}
+.page-plans .tablewrap th:nth-child(10){width:8%}
+.page-plans .tablewrap th:nth-child(n+4):nth-child(-n+7),.page-plans .tablewrap td:nth-child(n+4):nth-child(-n+7){padding-left:3px;padding-right:3px}
+.page-plans .tablewrap td:nth-child(7){overflow-wrap:normal;word-break:normal}
+}
