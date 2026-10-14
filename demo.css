@@ -79,3 +79,9 @@
 .page-hearing .hearing-feedback .actions{grid-column:2}
 .page-compare .compare-submit{background:#eaf8ef;border-color:#a9dcbf}
 @media(max-width:800px){.page-compare .agent-hero,.page-plans .agent-hero,.page-hearing .agent-hero{min-height:155px;padding:20px 0}.agent-warning{grid-template-columns:1fr}.agent-warning .warning-symbol{text-align:left}.agent-section{padding:14px!important}.page-plans .criteria-panel,.page-hearing .hearing-feedback{display:block}.page-hearing .hearing-feedback textarea{width:100%}}
+
+/* Home page spacing and photographic header trial, 2026-10-14 */
+.page-home .hero{background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Arizona_desert_panorama.jpg?width=1920");background-position:center 48%;background-size:cover;background-repeat:no-repeat}
+.page-home .home-layout{max-width:1500px;padding-left:clamp(22px,3vw,46px);padding-right:clamp(22px,3vw,46px)}
+.page-home .home-layout>.card{margin-top:0;margin-bottom:52px}
+@media(max-width:800px){.page-home .home-layout{padding-left:20px;padding-right:20px}.page-home .home-layout>.card{margin-bottom:34px}}
