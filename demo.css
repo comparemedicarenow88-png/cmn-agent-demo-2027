@@ -207,3 +207,5 @@ padding-left:0!important;padding-right:16px!important;
 .page-compare .dental-item input{display:block;width:100%;box-sizing:border-box;margin-top:5px}
 .page-compare .dental-item output{font-weight:700;text-align:right;padding-bottom:10px}
 @media(max-width:700px){.page-compare .dental-item{grid-template-columns:1fr 1fr}.page-compare .dental-item>div:first-child{grid-column:1/-1}}
+
+.page-compare .dental-allowance-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.page-compare .dental-allowance-grid .top-plan-card{background:#f2faf5;border:1px solid #c6dfcd;border-radius:9px;padding:15px;min-width:0}.page-compare .dental-allowance-grid h4{margin:0 0 12px}@media(max-width:850px){.page-compare .dental-allowance-grid{grid-template-columns:1fr}}
