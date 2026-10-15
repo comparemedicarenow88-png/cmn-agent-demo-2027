@@ -72,7 +72,9 @@ def main():
             if not path.exists():a.error(f'Missing archive: {path}')
             # Archive filenames must explicitly identify the 2027 contract year.
             if not re.search(r'(?<!\d)2027(?!\d)',path.name):a.error(f'{kind} archive filename must identify contract year 2027: {path.name}')
-            report['archives'][kind]=scan_archive(path,ids,args.out/kind if False else args.out)
+            kind_out=args.out/kind
+            kind_out.mkdir(parents=True,exist_ok=True)
+            report['archives'][kind]=scan_archive(path,ids,kind_out)
     (args.out/'report.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
     print(json.dumps(report,indent=2))
 if __name__=='__main__':main()
