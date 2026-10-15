@@ -199,3 +199,11 @@ padding-left:0!important;padding-right:16px!important;
 .page-compare .top-plan-id{font-size:12px;color:#52645a}
 .page-compare .top-plan-cost{font-size:27px;font-weight:750;color:#006b3c;margin:12px 0 2px}
 @media(max-width:800px){.page-compare .top-three-grid{grid-template-columns:1fr}}
+
+/* Independent dental estimator */
+.page-compare .dental-list{display:grid;gap:9px;margin:18px 0}
+.page-compare .dental-item{display:grid;grid-template-columns:minmax(180px,2fr) minmax(85px,.7fr) minmax(135px,1fr) minmax(70px,.65fr);align-items:end;gap:14px;background:#fff;border:1px solid #d5e4da;border-radius:8px;padding:13px}
+.page-compare .dental-item label{font-size:12px;font-weight:600}
+.page-compare .dental-item input{display:block;width:100%;box-sizing:border-box;margin-top:5px}
+.page-compare .dental-item output{font-weight:700;text-align:right;padding-bottom:10px}
+@media(max-width:700px){.page-compare .dental-item{grid-template-columns:1fr 1fr}.page-compare .dental-item>div:first-child{grid-column:1/-1}}
