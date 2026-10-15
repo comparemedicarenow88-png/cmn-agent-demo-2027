@@ -7,5 +7,10 @@ window.CMN_DENTAL_ALLOWANCES_2027={
 "H8173_005_0":{annualAllowance:1000,source:"https://www.devoted.com/find-a-plan/maricopa-az-03060/",verification:"carrier-plan-page; procedure/network rules unverified"},
 "H6586_005_0":{annualAllowance:1000,source:"https://www.devoted.com/find-a-plan/maricopa-az-03060/",verification:"carrier-plan-page; procedure/network rules unverified"},
 "H8173_019_0":{annualAllowance:250,source:"https://www.devoted.com/find-a-plan/maricopa-az-03060/",verification:"carrier-plan-page; procedure/network rules unverified"},
-"H7993_105_0":{annualAllowance:4250,source:"https://www.devoted.com/find-a-plan/maricopa-az-03060/",verification:"carrier-plan-page; procedure/network rules unverified"}
+"H7993_105_0":{annualAllowance:4250,source:"https://www.devoted.com/find-a-plan/maricopa-az-03060/",verification:"carrier-plan-page; procedure/network rules unverified"},
+"H6586_001_0":{annualAllowance:1500,source:"https://www.devoted.com/find-a-plan/maricopa-az-03060/",verification:"2027 allowance published; CDT and cost share unverified"},
+"H7993_090_0":{annualAllowance:4000,source:"https://www.devoted.com/find-a-plan/maricopa-az-03060/",verification:"2027 allowance published; CDT and cost share unverified"},
+"H8173_001_0":{annualAllowance:1000,source:"https://www.devoted.com/find-a-plan/maricopa-az-03060/",verification:"2027 allowance published; CDT and cost share unverified"},
+"H8173_020_0":{annualAllowance:1500,source:"https://www.devoted.com/find-a-plan/maricopa-az-03060/",verification:"2027 allowance published; CDT and cost share unverified"},
+"H8173_021_0":{annualAllowance:3500,source:"https://www.devoted.com/find-a-plan/maricopa-az-03060/",verification:"2027 allowance published; CDT and cost share unverified"}
 };
