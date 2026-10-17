@@ -225,3 +225,7 @@ padding-left:0!important;padding-right:16px!important;
 
 /* Match the homepage banner exactly on workflow pages; remove earlier gradient overlay. */
 .page-compare .hero.agent-hero,.page-plans .hero.agent-hero,.page-hearing .hero.agent-hero{background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Arizona_desert_panorama.jpg?width=1920");background-position:center 48%;background-size:cover;background-repeat:no-repeat}
+
+/* Explicit final header override: photo unobscured, all hero text white. */
+body.page-compare section.hero.agent-hero,body.page-plans section.hero.agent-hero,body.page-hearing section.hero.agent-hero{background:none!important;background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Arizona_desert_panorama.jpg?width=1920")!important;background-position:center 48%!important;background-size:cover!important;background-repeat:no-repeat!important}
+body.page-compare section.hero.agent-hero h1,body.page-plans section.hero.agent-hero h1,body.page-hearing section.hero.agent-hero h1,body.page-compare section.hero.agent-hero .lead,body.page-plans section.hero.agent-hero .lead,body.page-hearing section.hero.agent-hero .lead{color:#fff!important;text-shadow:0 2px 5px rgba(0,0,0,.7)!important}
