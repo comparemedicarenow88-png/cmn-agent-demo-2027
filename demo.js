@@ -17,7 +17,7 @@ if($('drugNdc')){
   const raw=ndc.value.trim(),qty=Number(quantity.value),nFills=Number(fills.value);
   put('cmnDrugLookup',{ndc:raw,quantity:quantity.value,fills:fills.value});
   if(!raw){status.textContent='Enter an exact 11-digit NDC to view the CMS reference amount. No plan costs or rankings are changed.';return}
-  if(!/^\\d{11}$/.test(raw)||!Number.isInteger(qty)||qty<1||!Number.isInteger(nFills)||nFills<1||nFills>36){status.textContent='Enter exactly 11 digits, a positive whole-number quantity and 1–36 annual fills.';return}
+  if(!/^[0-9]{11}$/.test(raw)||!Number.isInteger(qty)||qty<1||!Number.isInteger(nFills)||nFills<1||nFills>36){status.textContent='Enter exactly 11 digits, a positive whole-number quantity and 1–36 annual fills.';return}
   const result=window.CMN_DRUG_REFERENCE?.lookup(raw,qty);
   if(!result||result.status!=='reference-only'){status.textContent='No matching 2027 CMS negotiated-price reference for this NDC. Price unavailable; not a coverage determination.';return}
   const annual=result.referenceCost*nFills;
