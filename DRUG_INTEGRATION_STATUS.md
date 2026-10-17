@@ -21,3 +21,6 @@ Eliquis NDC 00003089321: $4.257193 per unit; 60 units = $255.43 per fill; 12 fil
 - Agent-visible labels must keep CMS reference amounts separate from plan member estimates.
 
 Do not merge or deploy until the above validations are completed.
+
+## Three-plan illustrative scenarios (2026-10-17)
+The input page now shows Devoted Giveback 091, HealthSpring Preferred, and AARP Patriot No Rx. An agent can enter a hypothetical annual deductible and coinsurance rate. The result is labeled illustrative and is not connected to rankings. AARP Patriot No Rx is flagged as no Part D benefit. These are not verified plan calculations. Exact 2027 EOC cost-sharing and formulary tier, pharmacy price, and coverage-stage data remain outstanding. No live deployment or browser validation performed.
