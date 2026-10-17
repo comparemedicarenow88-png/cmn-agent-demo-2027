@@ -20,7 +20,21 @@ if($('drugNdc')){
   const r=window.CMN_DRUG_REFERENCE?.lookup(n,q);
   status.textContent=r?.status==='reference-only'?(r.drug+' — CMS reference '+r.referenceCost.toFixed(2)+' per fill; '+(r.referenceCost*f).toFixed(2)+' for '+f+' fills. NOT member cost; rankings unchanged.'):'No CMS negotiated price found for this NDC; coverage unknown.';
  }
- [ndc,qty,fills].forEach(x=>x.addEventListener('input',refresh));refresh();
+ const deductible=$('drugScenarioDeductible'),coinsurance=$('drugScenarioCoinsurance'),scenario=$('drugScenarioResults');
+ function renderScenarios(){
+  const chosen=plans.filter(p=>['H7993_091_0','H0354_028_0','H0609_083_0'].includes(p.id));
+  const n=ndc.value.trim(),q=Number(qty.value),f=Number(fills.value);
+  scenario.textContent='';
+  for(const plan of chosen){
+   const result=window.CMN_DRUG_REFERENCE?.calculatePlanScenario(plan,n,q,f,{deductible:Number(deductible.value),coinsurance:Number(coinsurance.value)/100});
+   const line=document.createElement('p');
+   line.textContent=plan.name+': '+(result?.status==='illustrative-only'?('$'+result.memberCost.toFixed(2)+' hypothetical annual member cost — NOT verified'):(result?.status==='no-part-d-benefit'?'No Part D benefit; member cost unavailable':'Cost unavailable; exact NDC and valid assumptions required'));
+   scenario.appendChild(line);
+  }
+ }
+ const oldRefresh=refresh;
+ [ndc,qty,fills,deductible,coinsurance].forEach(x=>x.addEventListener('input',renderScenarios));
+ [ndc,qty,fills].forEach(x=>x.addEventListener('input',refresh));refresh();renderScenarios();
 }
 if($('compareBtn')&&inputs){['drugEliquis','drugAtorvastatin','drugMetformin'].forEach(id=>{if($(id))$(id).checked=Boolean(inputs[id])})}
 if($('compareBtn')&&inputs){const savedFields=['zip','pcpThis','pcpLast','specThis','specLast','stays','days','procCount','procedure','drugs','dental'];savedFields.forEach(id=>{if($(id)&&inputs[id]!==undefined&&inputs[id]!==null)$(id).value=inputs[id]})}
