@@ -1,18 +1,23 @@
-# CMS 2027 drug pricing integration status
+# 2027 CMS Drug Integration Status
 
-Development branch only: feature/cms-drug-pricing. Not deployed.
+Branch: feature/cms-drug-pricing (NOT deployed)
 
-## Added
-- cms-mfp-2027.js: 245 exact-NDC CMS maximum fair price records from previously prepared 2027 selected-drug file. Leading zeroes restored to 11-digit NDCs.
-- cms-drug-reference.js: exact-NDC reference price lookup and separate illustrative deductible/coinsurance helper.
+## Implemented and statically checked
+- 245 CMS negotiated maximum fair price records indexed by exact 11-digit NDC.
+- Page 2 exact NDC, quantity per fill, and annual fills fields.
+- Browser-local preservation of these three values.
+- Reference lookup renders CMS reference cost per fill and annual reference total.
+- Missing NDC and invalid input are flagged as unavailable, not interpreted as uncovered.
+- The existing medical rankings are unchanged.
 
-## NOT completed
-- The current Page 2 drug checkboxes are still only saved; no 11-digit NDC entry and quantity UI is connected.
-- No per-plan 2027 formulary-to-contract mapping, pharmacy network prices, negotiated dispensing fees, deductible, tier copay/coinsurance and coverage-stage data are linked.
-- No verified plan-specific member cost calculation or 52-plan drug-inclusive ranking exists.
-- These two new scripts are NOT yet loaded in compare.html or deployed.
+## Verified reference test
+Eliquis NDC 00003089321: $4.257193 per unit; 60 units = $255.43 per fill; 12 fills = $3,065.16 (rounded fill totals). This is NOT patient out-of-pocket cost.
 
-## Safety
-Do not use MFP as member copay. Do not label MFP-based illustrations as plan-specific quotes.
-Preserve existing medical ranking until plan-specific drug costs are validated.
-Next: obtain validated 2027 plan/formulary/benefit mappings and CVS pricing assumptions, build plan-specific drug engine and test Eliquis across Devoted, HealthSpring, AARP Patriot.
+## Still required before deploying or using in plan comparisons
+- Real browser smoke test on a development deployment.
+- Confirmed plan-specific 2027 formulary/contract mapping, coverage restrictions, CVS network pharmacy rates, deductibles, tier copays/coinsurance, and Part D coverage stage rules.
+- Verified plan-specific member-cost engine and all-52-plan drug-inclusive rankings.
+- Test cases across Devoted, HealthSpring and AARP Patriot, including noncovered/unavailable drugs.
+- Agent-visible labels must keep CMS reference amounts separate from plan member estimates.
+
+Do not merge or deploy until the above validations are completed.
