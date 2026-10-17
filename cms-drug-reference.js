@@ -15,5 +15,17 @@ function estimateMemberCost(referenceMonthlyCost,months,deductible,coinsurance){
  const total=cost*m;
  return Math.round((Math.min(d,total)+Math.max(0,total-d)*c)*100)/100;
 }
-window.CMN_DRUG_REFERENCE={lookup,estimateMemberCost,normalizeNdc};
+function calculatePlanScenario(plan,ndc,quantity,fills,assumptions){
+ const reference=lookup(ndc,quantity),n=Number(fills);
+ if(!plan)return {status:'plan-unavailable'};
+ if(plan.drugCoverage==='No')return {status:'no-part-d-benefit',planId:plan.id,memberCost:null,notice:'This plan does not include Part D; separate prescription coverage/cash costs are not calculated.'};
+ if(plan.drugCoverage!=='Yes')return {status:'coverage-unverified',planId:plan.id,memberCost:null};
+ if(reference.status!=='reference-only')return {status:reference.status,planId:plan.id,memberCost:null};
+ if(!Number.isInteger(n)||n<1||n>36)return {status:'invalid-fills',memberCost:null};
+ const deductible=Number(assumptions?.deductible),coinsurance=Number(assumptions?.coinsurance);
+ if(!Number.isFinite(deductible)||deductible<0||!Number.isFinite(coinsurance)||coinsurance<0||coinsurance>1)return {status:'assumptions-required',memberCost:null};
+ const memberCost=estimateMemberCost(reference.referenceCost,n,deductible,coinsurance);
+ return {status:'illustrative-only',planId:plan.id,memberCost,referenceAnnualCost:Math.round(reference.referenceCost*n*100)/100,assumptions:{deductible,coinsurance},notice:'Hypothetical calculation only: formulary coverage, preferred CVS network rate, tier, deductible applicability, dispensing fees, other prescriptions and 2027 Part D out-of-pocket limit not verified. Not suitable for ranking or enrollment decisions.'};
+}
+window.CMN_DRUG_REFERENCE={lookup,estimateMemberCost,normalizeNdc,calculatePlanScenario};
 })();
