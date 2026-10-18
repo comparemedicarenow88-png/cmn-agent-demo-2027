@@ -229,3 +229,6 @@ padding-left:0!important;padding-right:16px!important;
 /* Explicit final header override: photo unobscured, all hero text white. */
 body.page-compare section.hero.agent-hero,body.page-plans section.hero.agent-hero,body.page-hearing section.hero.agent-hero{background:none!important;background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Arizona_desert_panorama.jpg?width=1920")!important;background-position:center 48%!important;background-size:cover!important;background-repeat:no-repeat!important}
 body.page-compare section.hero.agent-hero h1,body.page-plans section.hero.agent-hero h1,body.page-hearing section.hero.agent-hero h1,body.page-compare section.hero.agent-hero .lead,body.page-plans section.hero.agent-hero .lead,body.page-hearing section.hero.agent-hero .lead{color:#fff!important;text-shadow:0 2px 5px rgba(0,0,0,.7)!important}
+
+/* Hearing results: display all plan rows without an internal vertical cutoff. */
+.page-hearing .tablewrap{max-height:none!important;overflow-x:auto;overflow-y:visible!important}
